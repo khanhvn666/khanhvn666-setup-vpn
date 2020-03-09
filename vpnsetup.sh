@@ -95,9 +95,9 @@ fi
 
 if [ -z "$VPN_IPSEC_PSK" ] && [ -z "$VPN_USER" ] && [ -z "$VPN_PASSWORD" ]; then
   bigecho "VPN credentials not set by user. Generating random PSK and password..."
-  VPN_IPSEC_PSK=sAigon123*
+  VPN_IPSEC_PSK=sAigon123*$
   VPN_USER=khanh
-  VPN_PASSWORD=sAigon123*
+  VPN_PASSWORD=sAigon123*$
 fi
 
 if [ -z "$VPN_IPSEC_PSK" ] || [ -z "$VPN_USER" ] || [ -z "$VPN_PASSWORD" ]; then
